@@ -1,0 +1,172 @@
+{
+  // Editor
+  "editor.fontFamily": "'JetBrains Mono', 'JetBrainsMono Nerd Font', monospace",
+  "editor.fontSize": 17,
+  "editor.lineHeight": 1.4,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.renderWhitespace": "selection",
+  "editor.renderControlCharacters": false,
+  "editor.wordWrap": "off",
+  "editor.wordWrapColumn": 100,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit",
+  },
+
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true,
+  },
+
+  "editor.inlineSuggest.enabled": true,
+  "editor.parameterHints.enabled": true,
+  "editor.hover.delay": 300,
+  "editor.linkedEditing": true,
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.find.seedSearchStringFromSelection": "selection",
+
+  // Files
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.cache": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+  },
+
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/.venv/**": true,
+    "**/venv/**": true,
+    "**/__pycache__/**": true,
+    "**/.pytest_cache/**": true,
+    "**/.mypy_cache/**": true,
+    "**/target/**": true,
+    "**/build/**": true,
+    "**/dist/**": true,
+    "**/.cache/**": true,
+  },
+
+  // Search
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.venv": true,
+    "**/venv": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true,
+    "**/target": true,
+    "**/build": true,
+    "**/dist": true,
+    "**/.cache": true,
+    "**/.terraform": true,
+  },
+
+  // Explorer
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": false,
+
+  // Workbench
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.pinnedTabSizing": "normal",
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.indent": 15,
+  "workbench.activityBar.location": "default",
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+
+  // Terminal
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.lineHeight": 1.3,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.confirmOnExit": "never",
+
+  // Linux
+  "terminal.integrated.defaultProfile.linux": "fish",
+
+  // Git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": false,
+  "git.detectSubmodules": true,
+  "git.mergeEditor": true,
+  "scm.diffDecorations": "all",
+  "scm.diffDecorationsGutterPattern": {
+    "added": true,
+    "modified": true,
+  },
+
+  // Diff Editor
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
+  "diffEditor.maxComputationTime": 5000,
+
+  // Code Intelligence
+  "breadcrumbs.enabled": true,
+  "outline.showFiles": true,
+  "outline.showModules": true,
+  "outline.showVariables": true,
+  "outline.showFunctions": true,
+  "outline.showClasses": true,
+
+  // Formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // Emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+
+  // Accessibility / UI
+  "window.titleBarStyle": "custom",
+  "window.commandCenter": false,
+  "window.title": "${activeEditorShort}${separator}${rootName}",
+  "window.restoreWindows": "all",
+  "window.newWindowDimensions": "inherit",
+  "window.menuBarVisibility": "compact",
+
+  // Extensions
+  "extensions.ignoreRecommendations": false,
+
+  // Security
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // Telemetry
+  "telemetry.telemetryLevel": "off",
+}
