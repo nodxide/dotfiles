@@ -1,133 +1,54 @@
 theme = Atom
-
-# ============================================================
-# Ghostty — Top-Tier Ubuntu / Zsh Configuration
-# ============================================================
-
-# -------------------------
-# Shell
-# -------------------------
-
-# Start Zsh automatically
-command = zsh -l
-
-
-# -------------------------
-# Font
-# -------------------------
-
-# Change this if you have another preferred Nerd Font
+command = fish
 font-family = JetBrainsMono Nerd Font
 font-size = 14
-
-# -------------------------
-# Window
-# -------------------------
-
 window-padding-x = 12
 window-padding-y = 10
-
 window-padding-balance = true
-
-# Hide unnecessary decorations
 window-decoration = true
 
-# Remember window size
+# Remember window size:
 window-save-state = always
-
-
-# -------------------------
-# Cursor
-# -------------------------
 
 cursor-style = block
 cursor-style-blink = true
-
-# -------------------------
-# Transparency
-# -------------------------
 background-opacity = 0.93
-
-# -------------------------
-# Scrollback
-# -------------------------
-
 scrollback-limit = 100000
 
-# Scroll to bottom when typing
+# Scroll to bottom when typing:
 scroll-to-bottom = true
 
-
-# -------------------------
-# Clipboard
-# -------------------------
-
 copy-on-select = false
-
 clipboard-read = allow
 clipboard-write = allow
-
-
-# -------------------------
-# Mouse
-# -------------------------
-
 mouse-hide-while-typing = true
-
-
-# -------------------------
-# Links
-# -------------------------
-
 link-url = true
 
-
-# -------------------------
-# Performance
-# -------------------------
-
-# Keep terminal responsive with large output
+# Keep terminal responsive with large output:
 working-directory = ~
 
-
-# -------------------------
-# Tabs
-# -------------------------
-
-# New tabs start in the same directory
+# New tabs start in the same directory:
 window-inherit-working-directory = true
 
-
-# -------------------------
-# Keybindings
-# -------------------------
-
-# Copy / Paste
+# Copy / Paste:
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+v=paste_from_clipboard
 
-# Clear screen
+# Clear screen:
 keybind = ctrl+shift+l=clear_screen
 
-# Increase / decrease font
+# Increase / decrease font:
 keybind = ctrl+plus=increase_font_size:1
 keybind = ctrl+minus=decrease_font_size:1
 keybind = ctrl+0=reset_font_size
 
-# New tab
+# New tab:
 keybind = ctrl+shift+t=new_tab
 
-# Close tab
+# Close tab:
 keybind = ctrl+shift+w=close_surface
 
-# New window
+# New window:
 keybind = ctrl+shift+n=new_window
 
-
-# -------------------------
-# Misc
-# -------------------------
-
-# Confirm before closing a running process
-confirm-close-surface = true
 
