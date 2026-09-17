@@ -4,10 +4,6 @@ format = '''
 [╭─](dimmed white)$os$hostname$directory$git_branch$git_status$git_state
 [╰─](dimmed white)$cmd_duration$character'''
 
-# ─────────────────────────────────────────────
-# Operating System
-# ─────────────────────────────────────────────
-
 [os]
 disabled = false
 style = 'bold purple'
@@ -17,34 +13,22 @@ format = '[$symbol]($style)'
 Ubuntu = '󰕈 '
 Unknown = '󰀻 '
 
-# ─────────────────────────────────────────────
-# Hostname
-# ─────────────────────────────────────────────
-
 [hostname]
 ssh_only = false
 ssh_symbol = '󰌾 '
 format = '[$ssh_symbol$hostname]($style) '
 style = 'bold purple'
 
-# ─────────────────────────────────────────────
-# Directory
-# ─────────────────────────────────────────────
-
 [directory]
 style = 'bold purple'
-format = '[in:]($style) [$path]($style)'
+format = '[>]($style) [$path]($style)'
 truncation_length = 4
 truncate_to_repo = true
 read_only = ' 󰌾'
 read_only_style = 'bold red'
 
-# ─────────────────────────────────────────────
-# Git
-# ─────────────────────────────────────────────
-
 [git_branch]
-symbol = '󰊢 '
+symbol = ' 󰊢 '
 style = 'bold blue'
 format = '[$symbol$branch]($style)'
 
@@ -56,18 +40,10 @@ format = ' ([\[$all_status$ahead_behind\]]($style))'
 style = 'bold purple'
 format = ' [$state( $progress_current/$progress_total)]($style)'
 
-# ─────────────────────────────────────────────
-# Command Duration
-# ─────────────────────────────────────────────
-
 [cmd_duration]
 min_time = 2000
 style = 'dimmed yellow'
 format = '[󱎫 $duration]($style) '
-
-# ─────────────────────────────────────────────
-# Prompt Character
-# ─────────────────────────────────────────────
 
 [character]
 success_symbol = '[](bold green)'
