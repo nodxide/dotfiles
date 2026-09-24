@@ -24,7 +24,7 @@
 
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
+    "source.organizeImports": "explicit"
   },
 
   "editor.suggestSelection": "first",
@@ -32,7 +32,7 @@
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
-    "strings": true,
+    "strings": true
   },
 
   "editor.inlineSuggest.enabled": true,
@@ -48,47 +48,6 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-
-  "files.exclude": {
-    "**/.git": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/.cache": true,
-    "**/__pycache__": true,
-    "**/.pytest_cache": true,
-    "**/.mypy_cache": true,
-  },
-
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/node_modules/**": true,
-    "**/.venv/**": true,
-    "**/venv/**": true,
-    "**/__pycache__/**": true,
-    "**/.pytest_cache/**": true,
-    "**/.mypy_cache/**": true,
-    "**/target/**": true,
-    "**/build/**": true,
-    "**/dist/**": true,
-    "**/.cache/**": true,
-  },
-
-  // Search
-  "search.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/.venv": true,
-    "**/venv": true,
-    "**/__pycache__": true,
-    "**/.pytest_cache": true,
-    "**/.mypy_cache": true,
-    "**/target": true,
-    "**/build": true,
-    "**/dist": true,
-    "**/.cache": true,
-    "**/.terraform": true,
-  },
 
   // Explorer
   "explorer.compactFolders": false,
@@ -130,7 +89,7 @@
   "scm.diffDecorations": "all",
   "scm.diffDecorationsGutterPattern": {
     "added": true,
-    "modified": true,
+    "modified": true
   },
 
   // Diff Editor
@@ -168,5 +127,5 @@
   "security.workspace.trust.untrustedFiles": "open",
 
   // Telemetry
-  "telemetry.telemetryLevel": "off",
+  "telemetry.telemetryLevel": "off"
 }
