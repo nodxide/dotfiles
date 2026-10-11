@@ -1,0 +1,145 @@
+window#waybar {
+  background: transparent;
+  color: @text;
+  font-family: 'Iosevka NF', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+window#waybar > box {
+  background: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+}
+
+#custom-launcher,
+#workspaces,
+#window,
+#clock,
+#mpris,
+#wireplumber,
+#network,
+#bluetooth,
+#language,
+/* #battery, */
+#idle_inhibitor,
+#tray {
+  margin: 4px 3px;
+  padding: 0 10px;
+  background-color: @surface;
+  color: @text;
+  border: 1px solid @border;
+  border-radius: 15px;
+}
+
+#custom-launcher {
+  min-width: 22px;
+  padding: 0 13px;
+  background-color: @blue;
+  color: @bg-dark;
+  border-color: @blue;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+#custom-launcher:hover {
+  background-color: @cyan;
+  border-color: @cyan;
+}
+
+#clock {
+  padding: 0 14px;
+  border-color: @border;
+  font-weight: 700;
+}
+
+#window {
+  color: @muted;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+#window.empty {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#group-system {
+  padding: 0 9px;
+}
+
+#group-system #cpu,
+#group-system #memory,
+#group-system #disk {
+  margin: 0;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#cpu.warning,
+#memory.warning,
+/* #battery.warning, */
+#disk.warning {
+  color: @yellow;
+}
+
+#cpu.critical,
+#memory.critical,
+/* #battery.critical, */
+#disk.critical {
+  color: @red;
+}
+
+#wireplumber.muted,
+#wireplumber.source.muted {
+  color: @red;
+}
+
+#network.disconnected {
+  color: @red;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+  color: @muted;
+}
+
+#idle_inhibitor.activated {
+  color: @green;
+  border-color: @green;
+}
+
+#tray {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+tooltip {
+  background-color: @bg-dark;
+  color: @text;
+  border: 1px solid @border;
+  border-radius: 10px;
+  padding: 7px 9px;
+}
+
+menu {
+  background-color: @bg-dark;
+  color: @text;
+  border: 1px solid @border;
+}

@@ -1,0 +1,10 @@
+{
+  "niri/window": {
+    "format": "{}",
+    "max-length": 24,
+    "separate-outputs": false,
+    "icon": false,
+    "empty-label-hidden": false,
+    "tooltip": true
+  }
+}

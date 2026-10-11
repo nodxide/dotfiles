@@ -1,0 +1,140 @@
+{
+  // 01. Window and Startup
+  "window.openFilesInNewWindow": "off",
+  "window.confirmBeforeClose": "keyboardOnly",
+  "workbench.startupEditor": "newUntitledFile",
+  "window.restoreWindows": "all",
+  "window.newWindowDimensions": "inherit",
+  "window.commandCenter": false,
+  "window.titleBarStyle": "custom",
+  "window.title": "🗼${activeEditorShort}${separator}${rootName}",
+  "window.titleSeparator": " # ",
+  "window.menuBarVisibility": "toggle",
+
+  // 02. Editor — Typography and Appearance
+  "editor.fontFamily": "'Iosevka NF', 'JetBrains Mono', monospace",
+  "editor.fontSize": 19.7,
+  "editor.lineHeight": 1.3,
+  "editor.fontLigatures": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 110,
+  "editor.tabSize": 2,
+  "editor.renderControlCharacters": false,
+
+  // 03. Editor — Editing and Code Actions
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.linkedEditing": true,
+
+  // 04. Editor — IntelliSense and Suggestions
+  "editor.quickSuggestions": {
+    "other": "on",
+    "strings": "on"
+  },
+
+  // 05. Editor — Find and Search
+  "editor.find.addExtraSpaceOnTop": false,
+  "editor.find.seedSearchStringFromSelection": "selection",
+
+  // 06. Files — Saving and File Hygiene
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // 07. Formatting — Default Formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 08. Prettier — General Formatting Rules
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "none",
+  "prettier.proseWrap": "always",
+
+  // 09. Workbench — Themes and Icons
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.iconTheme": "flow-deep",
+  "workbench.productIconTheme": "fluent-icons",
+
+  // 10. Workbench — Window Layout and Panels
+  "workbench.layoutControl.enabled": false,
+  "workbench.browser.showInTitleBar": false,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.panel.showLabels": false,
+  "workbench.editor.useModal": "off",
+  "workbench.settings.alwaysShowAdvancedSettings": true,
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+
+  // 11. Workbench — Editor Tabs
+  "workbench.editor.revealIfOpen": true,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.wrapTabs": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editor.labelFormat": "short",
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.sharedViewState": true,
+
+  // 12. Workbench — Navigation and Tree Views
+  "workbench.navigationControl.enabled": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+
+  // 13. Explorer — Files and Directories
+  "explorer.compactFolders": false,
+  "explorer.sortOrder": "type",
+  "explorer.sortOrderLexicographicOptions": "upper",
+  "explorer.incrementalNaming": "smart",
+  "explorer.autoOpenDroppedFile": false,
+
+  // 14. Breadcrumbs — Symbol Navigation
+  "breadcrumbs.enabled": true,
+  "breadcrumbs.icons": false,
+  "breadcrumbs.showKeys": false,
+  "breadcrumbs.showFiles": false,
+  "breadcrumbs.symbolPath": "off",
+  "breadcrumbs.showArrays": false,
+  "breadcrumbs.showEvents": false,
+  "breadcrumbs.showFields": false,
+  "breadcrumbs.showClasses": false,
+  "breadcrumbs.showMethods": false,
+  "breadcrumbs.showBooleans": false,
+  "breadcrumbs.showFunctions": false,
+  "breadcrumbs.showConstants": false,
+  "breadcrumbs.showEnumMembers": false,
+  "breadcrumbs.showConstructors": false,
+
+  // 15. Debugging — Minimal Interface
+  "debug.toolBarLocation": "hidden",
+  "debug.focusWindowOnBreak": false,
+  "debug.showInlineBreakpointCandidates": false,
+  "debug.showBreakpointsInOverviewRuler": false,
+
+  // 16. Git — Repository Management
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.mergeEditor": true,
+  "git.openRepositoryInParentFolders": "never",
+
+  // 17. Security — Workspace Trust
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // 18. Privacy and Telemetry
+  "telemetry.telemetryLevel": "off",
+
+  // 19. Chat Interface
+  "chat.titleBar.openInAgentsWindow.enabled": false
+}

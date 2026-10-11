@@ -1,0 +1,56 @@
+#mpris {
+  color: @purple;
+}
+
+#wireplumber {
+  color: @cyan;
+}
+
+#wireplumber:hover,
+#network:hover,
+#bluetooth:hover,
+#idle_inhibitor:hover,
+#tray:hover {
+  background-color: @surface-alt;
+}
+
+#network {
+  color: @green;
+}
+
+#bluetooth {
+  color: @blue;
+}
+
+#language {
+  color: @yellow;
+  padding: 0 9px;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @cyan;
+}
+
+#battery.warning:not(.charging) {
+  color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: steps(2);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: @text;
+  }
+}

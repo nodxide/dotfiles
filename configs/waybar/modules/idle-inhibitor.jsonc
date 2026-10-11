@@ -1,0 +1,11 @@
+{
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " "
+    },
+    "tooltip-format-activated": "Idle inhibition enabled — screen will stay awake",
+    "tooltip-format-deactivated": "Idle inhibition disabled — normal idle behavior"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "niri/workspaces": {
+    "format": "{value}",
+    "all-outputs": false,
+    "disable-markup": true,
+    "sort-by-name": false
+  }
+}

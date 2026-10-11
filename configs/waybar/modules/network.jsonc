@@ -1,0 +1,22 @@
+{
+  "network": {
+    "interval": 5,
+    "format": "{ifname}",
+    "format-wifi": "󰤨  {signalStrength}%",
+    "format-ethernet": "󰈀  Wired",
+    "format-linked": "󰈀  Connected",
+    "format-disconnected": "󰤭  Offline",
+
+    "tooltip": true,
+    "tooltip-format": "󰖩  {essid}\n󰤨  Signal: {signalStrength}%\n󰩟  IP: {ipaddr}\n󰆍  Interface: {ifname}",
+    "tooltip-format-wifi": "󰖩  {essid}\n󰤨  Signal: {signalStrength}%\n󰩟  IP: {ipaddr}\n󰆍  Interface: {ifname}",
+    "tooltip-format-ethernet": "󰈀  Ethernet\n󰩟  IP: {ipaddr}\n󰆍  Interface: {ifname}",
+    "tooltip-format-disconnected": "󰤭  Network disconnected\nClick to open network settings",
+
+    "on-click": "nm-connection-editor",
+    "on-click-right": "nmcli networking connectivity check",
+    "on-click-middle": "nmcli radio wifi off",
+    "on-scroll-up": "nmcli radio wifi on",
+    "on-scroll-down": "nmcli radio wifi off"
+  }
+}

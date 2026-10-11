@@ -1,0 +1,15 @@
+{
+  // Laptop-only widget. Enable by adding "battery" to modules-right in config.jsonc
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip-format": "Battery: {capacity}%\nTime: {time}\nPower: {power} W"
+  }
+}

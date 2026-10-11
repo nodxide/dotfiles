@@ -1,0 +1,19 @@
+{
+  "wireplumber": {
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "tooltip-format": "Output: {node_name}\nVolume: {volume}%",
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+  "wireplumber#source": {
+    "node-type": "Audio/Source",
+    "format": " {volume}%",
+    "format-muted": " muted",
+    "tooltip-format": "Input: {node_name}\nVolume: {volume}%",
+    "scroll-step": 5,
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+  }
+}
