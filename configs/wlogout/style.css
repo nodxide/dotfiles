@@ -1,0 +1,120 @@
+/*
+ * Elaris Power Menu — wlogout
+ * Palette: https://github.com/nodxide/vscode-theme-elaris
+ *
+ * Surfaces: #17171D #1D1D26 #22222C #252530 #2A2A35
+ * Text:     #EBE7E1
+ * Focus:    #DBE4A8
+ * Teal:     #9FD4C5
+ * Lilac:    #D2B7EE
+ * Amber:    #E5C98F
+ * Copper:   #F0B394
+ * Error:    #EF9BA4
+ */
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background-color: rgba(23, 23, 29, 0.88);
+}
+
+button {
+    color: #EBE7E1;
+    background-color: rgba(34, 34, 44, 0.96);
+    border: 1px solid #41414D;
+    border-radius: 22px;
+    background-repeat: no-repeat;
+    background-position: center 28%;
+    background-size: 54px;
+    padding: 110px 16px 20px;
+    margin: 7px;
+    font-family: "Iosevka NF", "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    outline: none;
+}
+
+button:hover,
+button:focus {
+    color: #17171D;
+    background-color: #DBE4A8;
+    border-color: #DBE4A8;
+    outline: none;
+}
+
+button:active {
+    background-color: #343440;
+    color: #EBE7E1;
+    border-color: #DBE4A8;
+}
+
+/* Use the icons installed with wlogout. The second URL supports /usr/local. */
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+/* Distinct semantic hover colors; red is reserved for destructive actions. */
+#lock:hover,
+#lock:focus {
+    color: #17171D;
+    background-color: #DBE4A8;
+    border-color: #DBE4A8;
+}
+
+#suspend:hover,
+#suspend:focus {
+    color: #17171D;
+    background-color: #9FD4C5;
+    border-color: #9FD4C5;
+}
+
+#hibernate:hover,
+#hibernate:focus {
+    color: #242219;
+    background-color: #E5C98F;
+    border-color: #E5C98F;
+}
+
+#logout:hover,
+#logout:focus {
+    color: #17171D;
+    background-color: #D2B7EE;
+    border-color: #D2B7EE;
+}
+
+#reboot:hover,
+#reboot:focus {
+    color: #17171D;
+    background-color: #F0B394;
+    border-color: #F0B394;
+}
+
+#shutdown:hover,
+#shutdown:focus {
+    color: #24171B;
+    background-color: #EF9BA4;
+    border-color: #EF9BA4;
+}

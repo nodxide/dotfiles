@@ -1,0 +1,37 @@
+general.import = ["~/.config/alacritty/themes/elaris.toml"]
+
+[window]
+padding = { x = 14, y = 12 }
+decorations = "None"
+opacity = 0.63
+
+[scrolling]
+history = 50000
+multiplier = 3
+
+[font]
+normal.family = "Iosevka Nerd Font"
+normal.style = "Regular"
+bold.family = "Iosevka Nerd Font"
+bold.style = "Bold"
+italic.family = "Iosevka Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "Iosevka Nerd Font"
+bold_italic.style = "Bold Italic"
+size = 17
+offset = { x = 0, y = 1 }
+glyph_offset = { x = 0, y = 0 }
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+thickness = 0.14
+
+[terminal]
+shell = "/bin/fish"
+osc52 = "OnlyCopy"
+
+[mouse]
+hide_when_typing = true

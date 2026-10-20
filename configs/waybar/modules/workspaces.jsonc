@@ -2,7 +2,10 @@
   "niri/workspaces": {
     "format": "{value}",
     "all-outputs": false,
+    "current-only": false,
     "disable-markup": true,
+    "disable-click": false,
+    "enable-bar-scroll": false,
     "sort-by-name": false
   }
 }

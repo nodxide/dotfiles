@@ -1,0 +1,640 @@
+// Interface and behavior
+simplified_ui true
+default_shell "fish"
+default_layout "compact"
+
+// Scrollback stores display rows per pane. 50,000 is useful for long logs,
+// but increases memory use when many panes are active. Requires restart.
+scroll_buffer_size 50000
+scrollback_editor "nvim"
+
+// UI preferences
+show_startup_tips false
+show_release_notes false
+osc8_hyperlinks true
+mouse_hover_effects true
+visual_bell false
+pane_frame_style "full"
+
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
+
+theme "elaris"
+
+themes {
+    elaris {
+        // ANSI / terminal colors
+        fg 235 231 225          // #EBE7E1 — primary foreground
+        bg 23 23 29             // #17171D — editor background
+        black 37 37 48          // #252530 — raised black
+        red 239 155 164         // #EF9BA4 — error coral
+        green 190 218 164       // #BEDAA4 — sage
+        yellow 229 201 143      // #E5C98F — amber
+        blue 184 206 240        // #B8CEF0 — soft blue
+        magenta 210 183 238     // #D2B7EE — lilac
+        orange 240 179 148      // #F0B394 — warm accent
+        cyan 159 212 197        // #9FD4C5 — teal
+        white 235 231 225       // #EBE7E1 — primary foreground
+
+        // General text and keyboard hints
+        text_unselected {
+            base 184 175 190
+            background 23 23 29
+            emphasis_0 219 228 168
+            emphasis_1 159 212 197
+            emphasis_2 184 206 240
+            emphasis_3 210 183 238
+        }
+
+        text_selected {
+            base 235 231 225
+            background 52 52 64
+            emphasis_0 219 228 168
+            emphasis_1 159 212 197
+            emphasis_2 229 201 143
+            emphasis_3 210 183 238
+        }
+
+        // Inactive tabs / status ribbons
+        ribbon_unselected {
+            base 184 175 190
+            background 29 29 38
+            emphasis_0 219 228 168
+            emphasis_1 159 212 197
+            emphasis_2 184 206 240
+            emphasis_3 210 183 238
+        }
+
+        // Active tab / mode ribbon: use the Elaris focus color sparingly
+        ribbon_selected {
+            base 23 23 29
+            background 219 228 168
+            emphasis_0 23 23 29
+            emphasis_1 65 65 77
+            emphasis_2 52 52 64
+            emphasis_3 65 65 77
+        }
+
+        // Tables and selectable lists
+        table_title {
+            base 235 231 225
+            background 37 37 48
+            emphasis_0 219 228 168
+            emphasis_1 159 212 197
+            emphasis_2 184 206 240
+            emphasis_3 210 183 238
+        }
+
+        table_cell_unselected {
+            base 235 231 225
+            background 23 23 29
+            emphasis_0 159 212 197
+            emphasis_1 184 206 240
+            emphasis_2 229 201 143
+            emphasis_3 210 183 238
+        }
+
+        table_cell_selected {
+            base 235 231 225
+            background 52 52 64
+            emphasis_0 219 228 168
+            emphasis_1 159 212 197
+            emphasis_2 229 201 143
+            emphasis_3 210 183 238
+        }
+
+        list_unselected {
+            base 235 231 225
+            background 23 23 29
+            emphasis_0 159 212 197
+            emphasis_1 184 206 240
+            emphasis_2 229 201 143
+            emphasis_3 210 183 238
+        }
+
+        list_selected {
+            base 235 231 225
+            background 52 52 64
+            emphasis_0 219 228 168
+            emphasis_1 159 212 197
+            emphasis_2 229 201 143
+            emphasis_3 210 183 238
+        }
+
+        // Pane borders: subdued when inactive, lime when focused,
+        // warm copper for transient frame highlights.
+        frame_unselected {
+            base 65 65 77
+            background 23 23 29
+            emphasis_0 150 144 157
+            emphasis_1 159 212 197
+            emphasis_2 184 206 240
+            emphasis_3 210 183 238
+        }
+
+        frame_selected {
+            base 219 228 168
+            background 23 23 29
+            emphasis_0 240 179 148
+            emphasis_1 159 212 197
+            emphasis_2 184 206 240
+            emphasis_3 210 183 238
+        }
+
+        frame_highlight {
+            base 240 179 148
+            background 23 23 29
+            emphasis_0 240 179 148
+            emphasis_1 240 179 148
+            emphasis_2 240 179 148
+            emphasis_3 240 179 148
+        }
+
+        // Command exit status
+        exit_code_success {
+            base 190 218 164
+            background 23 23 29
+            emphasis_0 159 212 197
+            emphasis_1 184 206 240
+            emphasis_2 210 183 238
+            emphasis_3 229 201 143
+        }
+
+        exit_code_error {
+            base 239 155 164
+            background 23 23 29
+            emphasis_0 240 179 148
+            emphasis_1 229 201 143
+            emphasis_2 184 206 240
+            emphasis_3 210 183 238
+        }
+
+        multiplayer_user_colors {
+            player_1 219 228 168
+            player_2 159 212 197
+            player_3 184 206 240
+            player_4 210 183 238
+            player_5 240 179 148
+            player_6 229 201 143
+            player_7 239 155 164
+            player_8 190 218 164
+            player_9 184 175 190
+            player_10 222 215 222
+        }
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// Custom keybindings — Elaris Zellij setup
+// Default Zellij bindings are preserved unless explicitly overridden.
+// Mode-entry keys are excluded from text-entry modes to avoid hijacking
+// tab/pane renaming or search input.
+// ═══════════════════════════════════════════════════════════════════════
+
+keybinds {
+    // ───────────────────────────────────────────────────────────────────
+    // 1. NORMAL MODE
+    // Default bindings remain available; shared mode switches are below.
+    // ───────────────────────────────────────────────────────────────────
+    normal {}
+
+    // ───────────────────────────────────────────────────────────────────
+    // 2. LOCKED MODE — Ctrl + G to unlock
+    // ───────────────────────────────────────────────────────────────────
+    locked {
+        bind "Ctrl g" {
+            SwitchToMode "Normal";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 3. RESIZE MODE — Ctrl + N
+    // Lowercase expands; uppercase contracts.
+    // ───────────────────────────────────────────────────────────────────
+    resize {
+        bind "Ctrl n" {
+            SwitchToMode "Normal";
+        }
+
+        bind "h" "Left" {
+            Resize "Increase Left";
+        }
+        bind "j" "Down" {
+            Resize "Increase Down";
+        }
+        bind "k" "Up" {
+            Resize "Increase Up";
+        }
+        bind "l" "Right" {
+            Resize "Increase Right";
+        }
+
+        bind "H" {
+            Resize "Decrease Left";
+        }
+        bind "J" {
+            Resize "Decrease Down";
+        }
+        bind "K" {
+            Resize "Decrease Up";
+        }
+        bind "L" {
+            Resize "Decrease Right";
+        }
+
+        bind "=" "+" {
+            Resize "Increase";
+        }
+        bind "-" {
+            Resize "Decrease";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 4. PANE MODE — Ctrl + P
+    // ───────────────────────────────────────────────────────────────────
+    pane {
+        bind "Ctrl p" {
+            SwitchToMode "Normal";
+        }
+
+        // Focus navigation
+        bind "h" "Left" {
+            MoveFocus "Left";
+        }
+        bind "j" "Down" {
+            MoveFocus "Down";
+        }
+        bind "k" "Up" {
+            MoveFocus "Up";
+        }
+        bind "l" "Right" {
+            MoveFocus "Right";
+        }
+        bind "p" {
+            SwitchFocus;
+        }
+
+        // Create panes
+        bind "n" {
+            NewPane;
+            SwitchToMode "Normal";
+        }
+        bind "d" {
+            NewPane "Down";
+            SwitchToMode "Normal";
+        }
+        bind "r" {
+            NewPane "Right";
+            SwitchToMode "Normal";
+        }
+        bind "s" {
+            NewPane "stacked";
+            SwitchToMode "Normal";
+        }
+
+        // Pane display and floating panes
+        bind "f" {
+            ToggleFocusFullscreen;
+            SwitchToMode "Normal";
+        }
+        bind "z" {
+            TogglePaneFrames;
+            SwitchToMode "Normal";
+        }
+        bind "w" {
+            ToggleFloatingPanes;
+            SwitchToMode "Normal";
+        }
+        bind "e" {
+            TogglePaneEmbedOrFloating;
+            SwitchToMode "Normal";
+        }
+        bind "i" {
+            TogglePanePinned;
+            SwitchToMode "Normal";
+        }
+
+        // Close and rename
+        bind "x" {
+            CloseFocus;
+            SwitchToMode "Normal";
+        }
+        bind "c" {
+            SwitchToMode "RenamePane";
+            PaneNameInput 0;
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 5. MOVE MODE — Ctrl + H
+    // ───────────────────────────────────────────────────────────────────
+    move {
+        bind "Ctrl h" {
+            SwitchToMode "Normal";
+        }
+
+        bind "h" "Left" {
+            MovePane "Left";
+            SwitchToMode "Normal";
+        }
+        bind "j" "Down" {
+            MovePane "Down";
+            SwitchToMode "Normal";
+        }
+        bind "k" "Up" {
+            MovePane "Up";
+            SwitchToMode "Normal";
+        }
+        bind "l" "Right" {
+            MovePane "Right";
+            SwitchToMode "Normal";
+        }
+        bind "n" "Tab" {
+            MovePane;
+            SwitchToMode "Normal";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 6. TAB MODE — Ctrl + T
+    // ───────────────────────────────────────────────────────────────────
+    tab {
+        bind "Ctrl t" {
+            SwitchToMode "Normal";
+        }
+
+        // Keep tab switching horizontal; remove default vertical aliases.
+        unbind "Up" "k" "Down" "j"
+
+        bind "h" "Left" {
+            GoToPreviousTab;
+            SwitchToMode "Normal";
+        }
+        bind "l" "Right" {
+            GoToNextTab;
+            SwitchToMode "Normal";
+        }
+
+        // Reorder tabs
+        bind "Shift h" {
+            MoveTab "Left";
+            SwitchToMode "Normal";
+        }
+        bind "Shift l" {
+            MoveTab "Right";
+            SwitchToMode "Normal";
+        }
+
+        // Tab lifecycle
+        bind "n" {
+            NewTab;
+            SwitchToMode "Normal";
+        }
+        bind "x" {
+            CloseTab;
+            SwitchToMode "Normal";
+        }
+        bind "r" {
+            SwitchToMode "RenameTab";
+            TabNameInput 0;
+        }
+        bind "s" {
+            ToggleActiveSyncTab;
+            SwitchToMode "Normal";
+        }
+
+        // Direct tab access
+        bind "1" { GoToTab 1; SwitchToMode "Normal"; }
+        bind "2" { GoToTab 2; SwitchToMode "Normal"; }
+        bind "3" { GoToTab 3; SwitchToMode "Normal"; }
+        bind "4" { GoToTab 4; SwitchToMode "Normal"; }
+        bind "5" { GoToTab 5; SwitchToMode "Normal"; }
+        bind "6" { GoToTab 6; SwitchToMode "Normal"; }
+        bind "7" { GoToTab 7; SwitchToMode "Normal"; }
+        bind "8" { GoToTab 8; SwitchToMode "Normal"; }
+        bind "9" { GoToTab 9; SwitchToMode "Normal"; }
+
+        bind "Tab" {
+            ToggleTab;
+            SwitchToMode "Normal";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 7. SCROLL MODE — Ctrl + S
+    // ───────────────────────────────────────────────────────────────────
+    scroll {
+        bind "Ctrl s" {
+            SwitchToMode "Normal";
+        }
+
+        bind "e" {
+            EditScrollback;
+            SwitchToMode "Normal";
+        }
+        bind "s" {
+            SwitchToMode "EnterSearch";
+            SearchInput 0;
+        }
+        bind "Ctrl c" {
+            ScrollToBottom;
+            SwitchToMode "Normal";
+        }
+
+        bind "j" "Down" {
+            ScrollDown;
+        }
+        bind "k" "Up" {
+            ScrollUp;
+        }
+        bind "Ctrl f" "PageDown" "Right" "l" {
+            PageScrollDown;
+        }
+        bind "Ctrl b" "PageUp" "Left" "h" {
+            PageScrollUp;
+        }
+        bind "d" {
+            HalfPageScrollDown;
+        }
+        bind "u" {
+            HalfPageScrollUp;
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 8. SEARCH MODE
+    // ───────────────────────────────────────────────────────────────────
+    search {
+        bind "Ctrl s" {
+            SwitchToMode "Normal";
+        }
+        bind "Ctrl c" {
+            ScrollToBottom;
+            SwitchToMode "Normal";
+        }
+
+        bind "j" "Down" {
+            ScrollDown;
+        }
+        bind "k" "Up" {
+            ScrollUp;
+        }
+        bind "Ctrl f" "PageDown" "Right" "l" {
+            PageScrollDown;
+        }
+        bind "Ctrl b" "PageUp" "Left" "h" {
+            PageScrollUp;
+        }
+        bind "d" {
+            HalfPageScrollDown;
+        }
+        bind "u" {
+            HalfPageScrollUp;
+        }
+
+        // Previous / next match
+        bind "n" {
+            Search "down";
+        }
+        bind "p" {
+            Search "up";
+        }
+
+        // Search options
+        bind "c" {
+            SearchToggleOption "CaseSensitivity";
+        }
+        bind "w" {
+            SearchToggleOption "Wrap";
+        }
+        bind "o" {
+            SearchToggleOption "WholeWord";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 9. ENTER SEARCH MODE
+    // ───────────────────────────────────────────────────────────────────
+    entersearch {
+        bind "Ctrl c" "Esc" {
+            SwitchToMode "Scroll";
+        }
+        bind "Enter" {
+            SwitchToMode "Search";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 10. RENAME TAB MODE
+    // ───────────────────────────────────────────────────────────────────
+    renametab {
+        bind "Ctrl c" {
+            SwitchToMode "Normal";
+        }
+        bind "Esc" {
+            UndoRenameTab;
+            SwitchToMode "Tab";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 11. RENAME PANE MODE
+    // ───────────────────────────────────────────────────────────────────
+    renamepane {
+        bind "Ctrl c" {
+            SwitchToMode "Normal";
+        }
+        bind "Esc" {
+            UndoRenamePane;
+            SwitchToMode "Pane";
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // 12. SESSION MODE — Ctrl + O
+    // ───────────────────────────────────────────────────────────────────
+    session {
+        bind "Ctrl o" {
+            SwitchToMode "Normal";
+        }
+
+        bind "w" {
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            }
+            SwitchToMode "Normal";
+        }
+
+        bind "d" {
+            Detach;
+        }
+    }
+
+    // ───────────────────────────────────────────────────────────────────
+    // GLOBAL BINDINGS
+    // ───────────────────────────────────────────────────────────────────
+    shared_except "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl g" {
+            SwitchToMode "Locked";
+        }
+        bind "Ctrl q" {
+            Quit;
+        }
+
+        // Quick pane focus
+        bind "Alt h" "Alt Left" {
+            MoveFocusOrTab "Left";
+        }
+        bind "Alt j" "Alt Down" {
+            MoveFocus "Down";
+        }
+        bind "Alt k" "Alt Up" {
+            MoveFocus "Up";
+        }
+        bind "Alt l" "Alt Right" {
+            MoveFocusOrTab "Right";
+        }
+
+        // Quick resize
+        bind "Alt =" "Alt +" {
+            Resize "Increase";
+        }
+        bind "Alt -" {
+            Resize "Decrease";
+        }
+    }
+
+    // Return to Normal from operational modes. Text-entry modes are excluded.
+    shared_except "normal" "locked" "entersearch" "renametab" "renamepane" {
+        bind "Enter" "Esc" {
+            SwitchToMode "Normal";
+        }
+    }
+
+    // Mode entry. Exclude text-entry modes so these combinations do not
+    // interfere with naming tabs/panes or typing a search query.
+    shared_except "pane" "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl p" { SwitchToMode "Pane"; }
+    }
+    shared_except "resize" "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl n" { SwitchToMode "Resize"; }
+    }
+    shared_except "move" "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl h" { SwitchToMode "Move"; }
+    }
+    shared_except "tab" "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl t" { SwitchToMode "Tab"; }
+    }
+    shared_except "scroll" "search" "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl s" { SwitchToMode "Scroll"; }
+    }
+    shared_except "session" "locked" "renametab" "renamepane" "entersearch" {
+        bind "Ctrl o" { SwitchToMode "Session"; }
+    }
+}

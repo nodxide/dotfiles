@@ -1,18 +1,26 @@
 {
   "wireplumber": {
-    "format": " {volume}%",
+    "format": "{icon} {volume}%",
+    "format-icons": [" ", " ", " "],
     "format-muted": " muted",
+    "tooltip": true,
     "tooltip-format": "Output: {node_name}\nVolume: {volume}%",
     "scroll-step": 5,
+    "scroll-scale": "cubic_percent",
+    "max-volume": 100,
     "on-click": "pavucontrol",
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
   },
+
   "wireplumber#source": {
     "node-type": "Audio/Source",
     "format": " {volume}%",
     "format-muted": " muted",
-    "tooltip-format": "Input: {node_name}\nVolume: {volume}%",
+    "tooltip": true,
+    "tooltip-format": "Input: {node_name}\nMicrophone volume: {volume}%",
     "scroll-step": 5,
+    "scroll-scale": "cubic_percent",
+    "max-volume": 100,
     "on-click": "pavucontrol",
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
   }

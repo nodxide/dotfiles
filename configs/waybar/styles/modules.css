@@ -1,32 +1,46 @@
+/* Elaris module accents and status states */
+
+/* Media player — mineral lilac */
 #mpris {
   color: @purple;
 }
 
+/* Audio — seafoam */
 #wireplumber {
   color: @cyan;
 }
 
-#wireplumber:hover,
-#network:hover,
-#bluetooth:hover,
-#idle_inhibitor:hover,
-#tray:hover {
-  background-color: @surface-alt;
+#wireplumber.muted,
+#wireplumber.source.muted {
+  color: @red;
 }
 
+/* Network — seafoam */
 #network {
-  color: @green;
+  color: @cyan;
 }
 
+#network.disconnected {
+  color: @red;
+}
+
+/* Bluetooth — periwinkle */
 #bluetooth {
   color: @blue;
 }
 
+#bluetooth.disabled,
+#bluetooth.off {
+  color: @muted;
+}
+
+/* Keyboard layout — warm amber */
 #language {
   color: @yellow;
   padding: 0 9px;
 }
 
+/* Battery — sage, with clear charging and warning states */
 #battery {
   color: @green;
 }
@@ -42,15 +56,14 @@
 
 #battery.critical:not(.charging) {
   color: @red;
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-timing-function: steps(2);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
-@keyframes blink {
-  to {
-    color: @text;
-  }
+/* Idle inhibitor */
+#idle_inhibitor {
+  color: @muted;
+}
+
+#idle_inhibitor.activated {
+  color: @accent;
+  border-color: @accent;
 }

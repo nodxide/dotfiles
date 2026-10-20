@@ -1,5 +1,4 @@
 {
-  // Floating macOS-inspired layout. Keep the module order here; definitions live in ./modules/.
   "layer": "top",
   "position": "top",
   "height": 42,
@@ -11,31 +10,37 @@
   "spacing": 0,
   "reload_style_on_change": true,
 
-  "modules-left": ["custom/launcher", "niri/workspaces", "niri/window"],
+  "modules-left": [
+    // "custom/launcher",
+    "niri/workspaces",
+    "mpris"
+    // "niri/window"
+  ],
   "modules-center": ["clock"],
   "modules-right": [
-    "mpris",
     "wireplumber",
     "wireplumber#source",
     "network",
-    "bluetooth",
+    // "bluetooth",
     "niri/language",
     "idle_inhibitor",
-    "tray"
+    "tray",
+    "custom/power"
   ],
 
   "include": [
-    "modules/launcher.jsonc",
+    // "modules/launcher.jsonc",
     "modules/workspaces.jsonc",
-    "modules/window.jsonc",
+    // "modules/window.jsonc",
     "modules/language.jsonc",
     "modules/clock.jsonc",
     "modules/media.jsonc",
     "modules/audio.jsonc",
     "modules/network.jsonc",
-    "modules/bluetooth.jsonc",
+    // "modules/bluetooth.jsonc",
     "modules/idle-inhibitor.jsonc",
-    "modules/tray.jsonc"
-    // "modules/battery.jsonc"
+    "modules/tray.jsonc",
+    // "modules/battery.jsonc",
+    "modules/custom-power.jsonc"
   ]
 }

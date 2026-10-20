@@ -1,11 +1,11 @@
-{
-  "custom/launcher": {
-    "exec": "printf ' '",
-    "interval": "once",
-    "format": "{text}",
-    "tooltip": true,
-    "tooltip-format": "Open Vicinae\nRight-click: Fuzzel",
-    "on-click": "vicinae toggle",
-    "on-click-right": "wofi --show drun --drun-show-actions --drun-show-icons --drun-show-descriptions --drun-show-categories"
-  }
-}
+// {
+//   "custom/launcher": {
+//     "exec": "printf ' '",
+//     "interval": "once",
+//     "format": "{text}",
+//     "tooltip": true,
+//     "tooltip-format": "Open Vicinae\nRight-click: Fuzzel",
+//     "on-click": "vicinae toggle",
+//     "on-click-right": "wofi --show drun --drun-show-actions --drun-show-icons --drun-show-descriptions --drun-show-categories"
+//   }
+// }

@@ -1,10 +1,10 @@
-{
-  "bluetooth": {
-    "format": " {status}",
-    "format-disabled": " off",
-    "format-off": " off",
-    "format-connected": " {num_connections}",
-    "tooltip-format": "{controller_alias}: {status}\n{num_connections} connected device(s)",
-    "on-click": "blueman-manager"
-  }
-}
+// {
+//   "bluetooth": {
+//     "format": " {status}",
+//     "format-disabled": " off",
+//     "format-off": " off",
+//     "format-connected": " {num_connections}",
+//     "tooltip-format": "{controller_alias}: {status}\n{num_connections} connected device(s)",
+//     "on-click": "blueman-manager"
+//   }
+// }

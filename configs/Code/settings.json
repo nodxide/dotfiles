@@ -5,9 +5,8 @@
   "workbench.startupEditor": "newUntitledFile",
   "window.restoreWindows": "all",
   "window.newWindowDimensions": "inherit",
-  "window.commandCenter": false,
   "window.titleBarStyle": "custom",
-  "window.title": "🗼${activeEditorShort}${separator}${rootName}",
+  "window.title": "${activeEditorShort}${separator}${rootName}",
   "window.titleSeparator": " # ",
   "window.menuBarVisibility": "toggle",
 
@@ -61,9 +60,9 @@
   "prettier.trailingComma": "none",
   "prettier.proseWrap": "always",
 
-  // 09. Workbench — Themes and Icons
-  "workbench.colorTheme": "Tokyo Night Storm",
-  "workbench.iconTheme": "flow-deep",
+  // 09. Workbench — Appearance and Themes
+  "workbench.colorTheme": "Elaris",
+  "workbench.iconTheme": "flow-you",
   "workbench.productIconTheme": "fluent-icons",
 
   // 10. Workbench — Window Layout and Panels
@@ -136,5 +135,6 @@
   "telemetry.telemetryLevel": "off",
 
   // 19. Chat Interface
-  "chat.titleBar.openInAgentsWindow.enabled": false
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "window.commandCenter": false
 }

@@ -1,0 +1,320 @@
+[
+  // 01. Editor Tabs and Navigation
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+x",
+    "command": "workbench.view.extensions"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+    "when": "inEditorsPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor",
+    "when": "!terminalFocus"
+  },
+
+  // 02. Editor — Navigation and Refactoring
+  {
+    "key": "ctrl+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  // {
+  //   "key": "ctrl+b",
+  //   "command": "editor.action.revealDefinition",
+  //   "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  // },
+
+  // Go to type definition and implementation.
+  {
+    "key": "ctrl+shift+alt+b",
+    "command": "editor.action.goToTypeDefinition",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+g",
+    "command": "editor.action.goToImplementation",
+    "when": "editorTextFocus"
+  },
+
+  // Rename symbol. Standard F2 remains available.
+  {
+    "key": "shift+f6",
+    "command": "editor.action.rename",
+    "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Quick fixes in the editor and Problems view.
+  {
+    "key": "alt+enter",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+enter",
+    "command": "problems.action.showQuickFixes",
+    "when": "problemFocus"
+  },
+
+  // Format the current document.
+  {
+    "key": "ctrl+shift+i",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Organize imports.
+  {
+    "key": "ctrl+alt+o",
+    "command": "editor.action.organizeImports",
+    "when": "editorHasOrganizeImportsProvider && editorTextFocus && !editorReadonly"
+  },
+
+  // Duplicate selection or line.
+  {
+    "key": "ctrl+shift+alt+d",
+    "command": "editor.action.duplicateSelection",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+
+  // Wrap selected text in an Emmet abbreviation.
+  {
+    "key": "ctrl+alt+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "when": "editorTextFocus"
+  },
+
+  // Scroll without moving the cursor.
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "editorScroll",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "value": 10
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "editorScroll",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "value": 10
+    },
+    "when": "editorTextFocus"
+  },
+
+  // 03. Workbench — Sidebar and Layout
+
+  // Ctrl+Alt+B toggles sidebar visibility; Ctrl+B is reserved for definitions.
+  {
+    "key": "ctrl+alt+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+
+  // Collapse every folder in the focused tree.
+  {
+    "key": "ctrl+shift+alt+c",
+    "command": "list.collapseAll",
+    "when": "listFocus && !inputFocus && !treestickyScrollFocused"
+  },
+
+  // Toggle the status bar.
+  {
+    "key": "ctrl+shift+alt+u",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+
+  // Maximize or restore the panel.
+  {
+    "key": "ctrl+alt+m",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "panelFocus"
+  },
+
+  // 04. Files — Saving and Configuration
+
+  {
+    "key": "alt+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "workbench.action.files.saveAll"
+  },
+
+  // Open configuration files directly.
+  {
+    "key": "ctrl+shift+alt+j",
+    "command": "workbench.action.openApplicationSettingsJson"
+  },
+  {
+    "key": "ctrl+shift+alt+k",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+
+  // 05. Explorer — File and Folder Operations
+
+  // Create a file or folder from the focused Explorer tree.
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+  // Rename and delete selected resources.
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus && !explorerResourceIsRoot && !explorerResourceReadonly"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "filesExplorerFocus && !inputFocus && !explorerResourceIsRoot && !explorerResourceReadonly"
+  },
+
+  // Enter opens files while retaining Explorer focus.
+  // Shift+Enter renames the selected resource.
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "filesExplorer.openFilePreserveFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+
+  // 06. Integrated Terminal — Management
+
+  // Open a new terminal.
+  {
+    "key": "ctrl+shift+alt+n",
+    "command": "workbench.action.terminal.new"
+  },
+
+  // Navigate terminal instances using dedicated shortcuts.
+  {
+    "key": "ctrl+shift+alt+left",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+right",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+
+  // Rename or terminate the focused terminal.
+  {
+    "key": "ctrl+shift+alt+e",
+    "command": "workbench.action.terminal.rename",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+q",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+
+  // Run terminal quick fixes.
+  {
+    "key": "ctrl+alt+enter",
+    "command": "workbench.action.terminal.quickFix",
+    "when": "terminalFocus && terminalProcessSupported"
+  },
+
+  // Insert a line continuation in multiline terminal prompts.
+  {
+    "key": "ctrl+shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n"
+    },
+    "when": "terminalFocus"
+  },
+
+  // 07. Source Control — Git
+
+  // Commit when the commit-message input has focus.
+  {
+    "key": "ctrl+enter",
+    "command": "git.commit",
+    "when": "scmInputIsFocus"
+  },
+
+  // 08. Debugging and Development
+
+  // Toggle the Debug Console REPL.
+  {
+    "key": "ctrl+shift+alt+y",
+    "command": "workbench.debug.action.toggleRepl",
+    "when": "workbench.panel.repl.view.active"
+  },
+
+  // Run a Dart application without debugging.
+  {
+    "key": "ctrl+shift+alt+r",
+    "command": "dart.startWithoutDebugging"
+  },
+
+  // Open TODO Tree (requires the extension).
+  {
+    "key": "ctrl+shift+alt+t",
+    "command": "workbench.view.extension.todo-tree-container"
+  },
+
+  // 09. AI and Auxiliary Sidebar
+
+  // Run Claude Code when the extension is available.
+  {
+    "key": "ctrl+shift+alt+space",
+    "command": "claude-code.runClaude.keyboard",
+    "when": "claude-code.hasClaudeInPath"
+  },
+
+  // Toggle the auxiliary sidebar.
+  {
+    "key": "ctrl+shift+alt+x",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  }
+]

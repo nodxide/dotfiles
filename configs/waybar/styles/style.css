@@ -1,0 +1,7 @@
+/* Elaris Waybar entry point.
+ * Keep palette.css first so the named colors are available to every stylesheet.
+ */
+@import url("palette.css");
+@import url("bar.css");
+@import url("modules.css");
+@import url("workspaces.css");

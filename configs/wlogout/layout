@@ -1,0 +1,36 @@
+{
+    "label": "lock",
+    "action": "sh -c 'if command -v swaylock >/dev/null 2>&1; then exec swaylock; elif command -v gtklock >/dev/null 2>&1; then exec gtklock; elif command -v hyprlock >/dev/null 2>&1; then exec hyprlock; else exec loginctl lock-session; fi'",
+    "text": "Lock",
+    "keybind": "l"
+}
+{
+    "label": "suspend",
+    "action": "systemctl suspend",
+    "text": "Suspend",
+    "keybind": "u"
+}
+{
+    "label": "hibernate",
+    "action": "systemctl hibernate",
+    "text": "Hibernate",
+    "keybind": "h"
+}
+{
+    "label": "logout",
+    "action": "niri msg action quit --skip-confirmation",
+    "text": "Log out",
+    "keybind": "e"
+}
+{
+    "label": "reboot",
+    "action": "systemctl reboot",
+    "text": "Reboot",
+    "keybind": "r"
+}
+{
+    "label": "shutdown",
+    "action": "systemctl poweroff",
+    "text": "Power off",
+    "keybind": "p"
+}

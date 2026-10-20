@@ -1,0 +1,66 @@
+# Elaris color scheme for Alacritty
+# Source palette: https://github.com/nodxide/vscode-theme-elaris
+# Import this file from alacritty.toml or copy its [colors.*] sections there.
+
+[colors.primary]
+background = "#17171D"
+foreground = "#EBE7E1"
+dim_foreground = "#96909D"
+bright_foreground = "#F5F0E8"
+
+[colors.cursor]
+text = "#17171D"
+cursor = "#DBE4A8"
+
+[colors.vi_mode_cursor]
+text = "#17171D"
+cursor = "#B8CEF0"
+
+[colors.selection]
+text = "#F5F1E9"
+background = "#41414D"
+
+[colors.search.matches]
+foreground = "#24241D"
+background = "#E5C98F"
+
+[colors.search.focused_match]
+foreground = "#24241D"
+background = "#DBE4A8"
+
+[colors.hints.start]
+foreground = "#24241D"
+background = "#DBE4A8"
+
+[colors.hints.end]
+foreground = "#EBE7E1"
+background = "#252530"
+
+[colors.line_indicator]
+foreground = "#EBE7E1"
+background = "#252530"
+
+[colors.footer_bar]
+foreground = "#EBE7E1"
+background = "#252530"
+
+[colors.normal]
+black = "#716A79"
+red = "#EF9BA4"
+green = "#BEDAA4"
+yellow = "#E5C98F"
+blue = "#B8CEF0"
+magenta = "#D2B7EE"
+cyan = "#9FD4C5"
+white = "#DED7DE"
+
+[colors.bright]
+black = "#96909D"
+red = "#F4ADB3"
+green = "#D5E6BC"
+yellow = "#E8D4AB"
+blue = "#C7D8EE"
+magenta = "#D9C3EF"
+cyan = "#B5E0D5"
+white = "#F5F0E8"
+

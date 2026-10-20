@@ -1,14 +1,25 @@
-/* Tokyo Night Storm palette */
-@define-color bg          #24283b;
-@define-color bg-dark     #1f2335;
-@define-color surface     #292e42;
-@define-color surface-alt #2f3549;
-@define-color border      #3b4261;
-@define-color muted       #565f89;
-@define-color text        #c0caf5;
-@define-color blue        #7aa2f7;
-@define-color cyan        #7dcfff;
-@define-color purple      #bb9af7;
-@define-color green       #9ece6a;
-@define-color yellow      #e0af68;
-@define-color red         #f7768e;
+/* Elaris — shared Waybar palette
+ * https://github.com/nodxide/vscode-theme-elaris
+ */
+
+/* Surfaces */
+@define-color bg             #17171D;
+@define-color surface        #1D1D26;
+@define-color surface-raised #252530;
+@define-color surface-hover  #2A2A35;
+@define-color border         #41414D;
+
+/* Text */
+@define-color text            #EBE7E1;
+@define-color secondary       #B8AFBE;
+@define-color muted           #96909D;
+
+/* Elaris accents */
+@define-color accent          #DBE4A8;
+@define-color blue            #B8CEF0;
+@define-color cyan            #9FD4C5;
+@define-color purple          #D2B7EE;
+@define-color green           #BEDAA4;
+@define-color yellow          #E5C98F;
+@define-color red              #EF9BA4;
+@define-color orange           #F0B394;

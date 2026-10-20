@@ -1,22 +1,19 @@
+/* Bar surface and shared module geometry */
 window#waybar {
-  background: transparent;
+  background-color: transparent;
   color: @text;
   font-family: 'Iosevka NF', sans-serif;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-window#waybar > box {
-  background: transparent;
-}
-
+window#waybar > box,
 .modules-left,
 .modules-center,
 .modules-right {
-  background: transparent;
+  background-color: transparent;
 }
 
-#custom-launcher,
 #workspaces,
 #window,
 #clock,
@@ -25,60 +22,91 @@ window#waybar > box {
 #network,
 #bluetooth,
 #language,
-/* #battery, */
+#battery,
 #idle_inhibitor,
-#tray {
-  margin: 4px 3px;
+#tray,
+#group-system {
+  min-height: 30px;
+  margin: 3px 3px;
   padding: 0 10px;
   background-color: @surface;
   color: @text;
   border: 1px solid @border;
-  border-radius: 15px;
+  border-radius: 18px;
 }
 
+/* Launcher */
 #custom-launcher {
   min-width: 22px;
-  padding: 0 13px;
-  background-color: @blue;
-  color: @bg-dark;
-  border-color: @blue;
-  font-size: 16px;
-  font-weight: 800;
+  margin: 3px 3px;
+  padding: 0 10px;
+  color: @accent;
+  background-color: @surface;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
+  border: 1px solid @border;
+  border-radius: 18px;
 }
 
 #custom-launcher:hover {
   background-color: @cyan;
+  color: @bg;
   border-color: @cyan;
 }
 
-#clock {
-  padding: 0 14px;
-  border-color: @border;
-  font-weight: 700;
-}
-
+/* Window title: keep it quiet so status chips remain the visual focus. */
 #window {
-  color: @muted;
-  padding-left: 13px;
-  padding-right: 13px;
+  padding: 0 12px;
+  color: @secondary;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 #window.empty {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  color: transparent;
   background-color: transparent;
   border-color: transparent;
-  box-shadow: none;
 }
 
+/* Clock */
+#clock {
+  padding: 0 13px;
+  color: @text;
+  font-weight: 600;
+}
+
+/* Shared hover state for interactive status modules. */
+#mpris:hover,
+#wireplumber:hover,
+#network:hover,
+#bluetooth:hover,
+#language:hover,
+#battery:hover,
+#idle_inhibitor:hover,
+#tray:hover,
+#group-system:hover {
+  background-color: @surface-hover;
+  border-color: @border;
+}
+
+/* Compact CPU / memory / disk values inside the system group. */
 #group-system {
-  padding: 0 9px;
+  padding: 0 7px;
 }
 
 #group-system #cpu,
 #group-system #memory,
 #group-system #disk {
+  min-height: 0;
   margin: 0;
   padding: 0 5px;
-  background: transparent;
+  color: @secondary;
+  background-color: transparent;
   border: none;
   border-radius: 0;
   box-shadow: none;
@@ -86,40 +114,47 @@ window#waybar > box {
 
 #cpu.warning,
 #memory.warning,
-/* #battery.warning, */
 #disk.warning {
   color: @yellow;
 }
 
 #cpu.critical,
 #memory.critical,
-/* #battery.critical, */
 #disk.critical {
   color: @red;
 }
 
-#wireplumber.muted,
-#wireplumber.source.muted {
-  color: @red;
+/* Power action */
+#custom-power {
+  min-height: 30px;
+  margin: 3px 3px;
+  padding: 0 11px;
+  color: @bg;
+  background-color: @accent;
+  font-weight: 700;
+  border: 1px solid @accent;
+  border-radius: 18px;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    border-color 150ms ease;
 }
 
-#network.disconnected {
-  color: @red;
+#custom-power:hover {
+  color: @bg;
+  background-color: @cyan;
+  border-color: @cyan;
 }
 
-#bluetooth.disabled,
-#bluetooth.off {
-  color: @muted;
+#custom-power:active {
+  color: @text;
+  background-color: @surface-raised;
+  border-color: @accent;
 }
 
-#idle_inhibitor.activated {
-  color: @green;
-  border-color: @green;
-}
-
+/* System tray */
 #tray {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 0 8px;
 }
 
 #tray > .passive {
@@ -130,16 +165,28 @@ window#waybar > box {
   -gtk-icon-effect: highlight;
 }
 
+/* Tooltips */
 tooltip {
-  background-color: @bg-dark;
   color: @text;
   border: 1px solid @border;
-  border-radius: 10px;
+  border-radius: 18px;
   padding: 7px 9px;
 }
 
+/* Context menus */
 menu {
-  background-color: @bg-dark;
   color: @text;
+  background-color: @surface-raised;
   border: 1px solid @border;
+  border-radius: 10px;
+}
+
+menuitem {
+  color: @text;
+  padding: 6px 10px;
+}
+
+menuitem:hover {
+  color: @accent;
+  background-color: @surface-hover;
 }

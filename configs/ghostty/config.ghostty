@@ -1,0 +1,53 @@
+theme = Everforest Dark Hard
+command = fish
+font-family = Iosevka Term
+font-size = 15
+window-padding-x = 12
+window-padding-y = 10
+window-padding-balance = true
+window-decoration = true
+window-theme = ghostty
+
+# Remember window size:
+window-save-state = always
+
+cursor-style = block
+cursor-style-blink = true
+background-opacity = 0.73
+scrollback-limit = 100000
+
+# Scroll to bottom when typing:
+scroll-to-bottom = true
+
+copy-on-select = false
+clipboard-read = allow
+clipboard-write = allow
+mouse-hide-while-typing = true
+link-url = true
+
+# Keep terminal responsive with large output:
+working-directory = ~
+
+# New tabs start in the same directory:
+window-inherit-working-directory = true
+
+# Copy / Paste:
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+
+# Clear screen:
+keybind = ctrl+shift+l=clear_screen
+
+# Increase / decrease font:
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+0=reset_font_size
+
+# New tab:
+keybind = ctrl+shift+t=new_tab
+
+# Close tab:
+keybind = ctrl+shift+w=close_surface
+
+# New window:
+keybind = ctrl+shift+n=new_window

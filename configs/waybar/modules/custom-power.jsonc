@@ -1,0 +1,10 @@
+// Merge this object into the top-level Waybar config object.
+// Also add "custom/power" to modules-right (or modules-left).
+{
+  "custom/power": {
+    "format": " Power",
+    "tooltip": true,
+    "tooltip-format": "Power menu · Lock · Suspend · Hibernate · Log out · Reboot · Power off",
+    "on-click": "wlogout --buttons-per-row 3 --column-spacing 16 --row-spacing 16"
+  }
+}

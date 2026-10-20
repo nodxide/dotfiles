@@ -1,0 +1,89 @@
+# Elaris — Fish syntax highlighting and completion pager theme.
+# Palette source: https://github.com/nodxide/vscode-theme-elaris
+# name: 'Elaris'
+[dark]
+# preferred_background: 17171d
+fish_color_normal EBE7E1
+fish_color_command DBE4A8 --bold
+fish_color_builtin 9FD4C5
+fish_color_function F0B394
+fish_color_keyword D2B7EE
+fish_color_quote D2DEAD
+fish_color_redirection 9FD4C5
+fish_color_end C1B9C8
+fish_color_error EF9BA4 --bold
+fish_color_param B8CEF0
+fish_color_valid_path EBE7E1 --underline
+fish_color_option B8CEF0
+fish_color_comment A7A0AD
+fish_color_selection --background=343440 --foreground=EBE7E1
+fish_color_operator C1B9C8
+fish_color_escape F0B394 --bold
+fish_color_autosuggestion 96909D
+fish_color_cwd 9FD4C5 --bold
+fish_color_cwd_root EF9BA4 --bold
+fish_color_user DED7DE
+fish_color_host B8CEF0
+fish_color_host_remote D2B7EE --bold
+fish_color_status EF9BA4 --bold
+fish_color_cancel --reverse
+fish_color_search_match --background=41402F
+fish_color_history_current DBE4A8 --bold
+
+# Completion pager: muted descriptions, strong prefix and soft selected row.
+fish_pager_color_progress --foreground=17171D --background=DBE4A8 --bold
+fish_pager_color_background --background=17171D
+fish_pager_color_prefix DBE4A8 --bold
+fish_pager_color_completion EBE7E1
+fish_pager_color_description 96909D
+fish_pager_color_selected_background --background=343440
+fish_pager_color_selected_prefix DBE4A8 --bold
+fish_pager_color_selected_completion EBE7E1
+fish_pager_color_selected_description B8AFBE
+fish_pager_color_secondary_background --background=1D1D26
+fish_pager_color_secondary_prefix 9FD4C5 --bold
+fish_pager_color_secondary_completion DED7DE
+fish_pager_color_secondary_description 96909D
+
+[unknown]
+# Keep the same readable palette in terminals that report no dark/light theme.
+# preferred_background: 17171d
+fish_color_normal EBE7E1
+fish_color_command DBE4A8 --bold
+fish_color_builtin 9FD4C5
+fish_color_function F0B394
+fish_color_keyword D2B7EE
+fish_color_quote D2DEAD
+fish_color_redirection 9FD4C5
+fish_color_end C1B9C8
+fish_color_error EF9BA4 --bold
+fish_color_param B8CEF0
+fish_color_valid_path EBE7E1 --underline
+fish_color_option B8CEF0
+fish_color_comment A7A0AD
+fish_color_selection --background=343440 --foreground=EBE7E1
+fish_color_operator C1B9C8
+fish_color_escape F0B394 --bold
+fish_color_autosuggestion 96909D
+fish_color_cwd 9FD4C5 --bold
+fish_color_cwd_root EF9BA4 --bold
+fish_color_user DED7DE
+fish_color_host B8CEF0
+fish_color_host_remote D2B7EE --bold
+fish_color_status EF9BA4 --bold
+fish_color_cancel --reverse
+fish_color_search_match --background=41402F
+fish_color_history_current DBE4A8 --bold
+fish_pager_color_progress --foreground=17171D --background=DBE4A8 --bold
+fish_pager_color_background --background=17171D
+fish_pager_color_prefix DBE4A8 --bold
+fish_pager_color_completion EBE7E1
+fish_pager_color_description 96909D
+fish_pager_color_selected_background --background=343440
+fish_pager_color_selected_prefix DBE4A8 --bold
+fish_pager_color_selected_completion EBE7E1
+fish_pager_color_selected_description B8AFBE
+fish_pager_color_secondary_background --background=1D1D26
+fish_pager_color_secondary_prefix 9FD4C5 --bold
+fish_pager_color_secondary_completion DED7DE
+fish_pager_color_secondary_description 96909D

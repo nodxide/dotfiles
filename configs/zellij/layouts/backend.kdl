@@ -1,0 +1,26 @@
+layout {
+    tab name="Code" {
+        pane command="nvim" name="Neovim"
+    }
+
+    tab name="API" {
+        pane split_direction="vertical" {
+            pane size="68%" name="Server"
+            pane size="32%" name="Logs"
+        }
+    }
+
+    tab name="Tests" {
+        pane split_direction="vertical" {
+            pane size="68%" name="pytest"
+            pane size="32%" name="Shell"
+        }
+    }
+
+    tab name="Git" {
+        pane split_direction="vertical" {
+            pane size="65%" name="Git"
+            pane size="35%" name="Shell"
+        }
+    }
+}

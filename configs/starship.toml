@@ -1,7 +1,7 @@
 add_newline = true
 
 format = '''
-[╭─](dimmed white)$os$hostname$directory$git_branch$git_status$git_state
+[╭─](dimmed white)$directory$git_branch$git_status$git_state
 [╰─](dimmed white)$cmd_duration$character'''
 
 [os]
@@ -21,8 +21,8 @@ style = 'bold purple'
 
 [directory]
 style = 'bold purple'
-format = '[>]($style) [$path]($style)'
-truncation_length = 4
+format = '[$path]($style)'
+truncation_length = 5
 truncate_to_repo = true
 read_only = ' 󰌾'
 read_only_style = 'bold red'

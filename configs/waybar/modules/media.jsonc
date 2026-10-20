@@ -1,7 +1,7 @@
 {
   "mpris": {
-    "format": " {title}",
-    "format-paused": " {title}",
+    "format": "  {title}",
+    "format-paused": "  {title}",
     "tooltip-format": "{player} — {artist}\n{album}\n{position} / {length}",
     "max-length": 30,
     "on-click": "playerctl play-pause",
